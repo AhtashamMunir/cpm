@@ -10,26 +10,26 @@ get_header();
             <!-- Patient Filter Form -->
             <form method="GET" action="" class="form-inline mb-4">
                 <div class="form-group mb-2">
-                    <label for="age" class="sr-only"><?php _e('Age', 'text_domain'); ?></label>
-                    <input type="number" name="age" id="age" class="form-control" placeholder="<?php _e('Age', 'text_domain'); ?>" value="<?php echo isset($_GET['age']) ? esc_attr($_GET['age']) : ''; ?>">
+                    <label for="age" class="sr-only"><?php _e('Age', 'clinic-patient-management'); ?></label>
+                    <input type="number" name="age" id="age" class="form-control" placeholder="<?php _e('Age', 'clinic-patient-management'); ?>" value="<?php echo isset($_GET['age']) ? esc_attr($_GET['age']) : ''; ?>">
                 </div>
                 <div class="form-group mx-sm-3 mb-2">
-                    <label for="gender" class="sr-only"><?php _e('Gender', 'text_domain'); ?></label>
+                    <label for="gender" class="sr-only"><?php _e('Gender', 'clinic-patient-management'); ?></label>
                     <select name="gender" id="gender" class="form-control">
-                        <option value=""><?php _e('Any', 'text_domain'); ?></option>
-                        <option value="Male" <?php selected('Male', isset($_GET['gender']) ? $_GET['gender'] : ''); ?>><?php _e('Male', 'text_domain'); ?></option>
-                        <option value="Female" <?php selected('Female', isset($_GET['gender']) ? $_GET['gender'] : ''); ?>><?php _e('Female', 'text_domain'); ?></option>
+                        <option value=""><?php _e('Any', 'clinic-patient-management'); ?></option>
+                        <option value="Male" <?php selected('Male', isset($_GET['gender']) ? $_GET['gender'] : ''); ?>><?php _e('Male', 'clinic-patient-management'); ?></option>
+                        <option value="Female" <?php selected('Female', isset($_GET['gender']) ? $_GET['gender'] : ''); ?>><?php _e('Female', 'clinic-patient-management'); ?></option>
                     </select>
                 </div>
                 <div class="form-group mx-sm-3 mb-2">
-                    <label for="visit_date" class="sr-only"><?php _e('Visit Date', 'text_domain'); ?></label>
-                    <input type="date" name="visit_date" id="visit_date" class="form-control" placeholder="<?php _e('Visit Date', 'text_domain'); ?>" value="<?php echo isset($_GET['visit_date']) ? esc_attr($_GET['visit_date']) : ''; ?>">
+                    <label for="visit_date" class="sr-only"><?php _e('Visit Date', 'clinic-patient-management'); ?></label>
+                    <input type="date" name="visit_date" id="visit_date" class="form-control" placeholder="<?php _e('Visit Date', 'clinic-patient-management'); ?>" value="<?php echo isset($_GET['visit_date']) ? esc_attr($_GET['visit_date']) : ''; ?>">
                 </div>
-                <button type="submit" class="btn btn-primary mb-2"><?php _e('Filter', 'text_domain'); ?></button>
+                <button type="submit" class="btn btn-primary mb-2"><?php _e('Filter', 'clinic-patient-management'); ?></button>
             </form>
 
             <?php
-            // Build the meta query based on filter inputs
+            // Meta query based on filter inputs
             $meta_query = array('relation' => 'AND');
 
             if (isset($_GET['age']) && $_GET['age'] !== '') {

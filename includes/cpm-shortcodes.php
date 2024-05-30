@@ -28,18 +28,18 @@ function cpm_filter_patients_shortcode($atts) {
     ?>
     <form method="GET" action="" class="form-inline">
         <div class="form-group mb-2">
-            <label for="age" class="sr-only"><?php _e('Age', 'text_domain'); ?></label>
-            <input type="number" name="age" id="age" class="form-control" placeholder="<?php _e('Age', 'text_domain'); ?>">
+            <label for="age" class="sr-only"><?php _e('Age', 'clinic-patient-management'); ?></label>
+            <input type="number" name="age" id="age" class="form-control" placeholder="<?php _e('Age', 'clinic-patient-management'); ?>">
         </div>
         <div class="form-group mx-sm-3 mb-2">
-            <label for="gender" class="sr-only"><?php _e('Gender', 'text_domain'); ?></label>
+            <label for="gender" class="sr-only"><?php _e('Gender', 'clinic-patient-management'); ?></label>
             <select name="gender" id="gender" class="form-control">
-                <option value=""><?php _e('Any', 'text_domain'); ?></option>
-                <option value="Male"><?php _e('Male', 'text_domain'); ?></option>
-                <option value="Female"><?php _e('Female', 'text_domain'); ?></option>
+                <option value=""><?php _e('Any', 'clinic-patient-management'); ?></option>
+                <option value="Male"><?php _e('Male', 'clinic-patient-management'); ?></option>
+                <option value="Female"><?php _e('Female', 'clinic-patient-management'); ?></option>
             </select>
         </div>
-        <button type="submit" class="btn btn-primary mb-2"><?php _e('Filter', 'text_domain'); ?></button>
+        <button type="submit" class="btn btn-primary mb-2"><?php _e('Filter', 'clinic-patient-management'); ?></button>
     </form>
     <?php
     if (isset($_GET['age']) || isset($_GET['gender'])) {
